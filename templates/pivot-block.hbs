@@ -1,10 +1,10 @@
-{{#if details.entity}}
+{{#if details.searchObject}}
   <h1 class="p-title">
       {{fa-icon "info" fixedWidth=true}}  Select a Search to Execute
   </h1>
-    <div><a class="p-link" href="http://localhost:8000/en-US/app/search/search?q=search%20source%3D%22alert.full%22%20host%3D%22ce7eaad4dc54%22%20sourcetype%3D%22Snort%22%20%22{{details.entity}}%22&display.page.search.mode=smart&dispatch.sample_ratio=1&workload_pool=&earliest=0&latest=&sid=1572400458.150"> Execute Time based IP lookup in Splunk</a></div>
-    <div><a class="p-link" href="https://www.localhost:8000/{{details.entity}}"> View Hash in SIEM</a></div>
-    <div><a class="p-link" href="https://www.localhost:8000/{{details.entity}}"> View Email in SIEM</a></div>
-    <div><a class="p-link" href="https://www.localhost:8000/{{details.entity}}"> View Domain in SIEM</a></div>
-    <div><a class="p-link" href="https://www.localhost:8000/{{details.entity}}"> View Time Query in SIEM</a></div>
+  {{#each details.searchObject as |search|}}
+    {{#if search.name}}
+      <div><a class="p-link" href={{search.urls}}> {{search.name}}</a></div>
+    {{/if}}
+  {{/each}}
 {{/if}}
