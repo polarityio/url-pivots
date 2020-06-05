@@ -35,16 +35,7 @@ module.exports = {
         },
         {
         key: 'url3',
-        name: 'SIEM Pivot Search 3',
-        description:'Search you want to perform',
-        default: '',
-        type: 'text',
-        userCanEdit: false,
-        adminOnly: true
-        },
-        {
-        key: 'url',
-        name: 'SIEM Pivot Search 4',
+        name: 'URL Pivot Search 3',
         description:'Search you want to perform',
         default: '',
         type: 'text',
@@ -53,7 +44,7 @@ module.exports = {
         },
         {
         key: 'url4',
-        name: 'SIEM Pivot Search 5',
+        name: 'URL Pivot Search 4',
         description:'Search you want to perform',
         default: '',
         type: 'text',
@@ -62,7 +53,7 @@ module.exports = {
         },
         {
         key: 'url5',
-        name: 'SIEM Pivot Search 6',
+        name: 'URL Pivot Search 5',
         description:'Search you want to perform',
         default: '',
         type: 'text',
@@ -71,7 +62,7 @@ module.exports = {
         },
         {
         key: 'url6',
-        name: 'SIEM Pivot Search 7',
+        name: 'URL Pivot Search 6',
         description:'Search you want to perform',
         default: '',
         type: 'text',
@@ -80,7 +71,7 @@ module.exports = {
         },
         {
         key: 'url7',
-        name: 'SIEM Pivot Search 8',
+        name: 'URL Pivot Search 7',
         description:'Search you want to perform',
         default: '',
         type: 'text',
@@ -89,7 +80,7 @@ module.exports = {
         },
         {
         key: 'url8',
-        name: 'SIEM Pivot Search 9',
+        name: 'URL Pivot Search 8',
         description:'Search you want to perform',
         default: '',
         type: 'text',
@@ -98,7 +89,7 @@ module.exports = {
         },
         {
         key: 'url9',
-        name: 'SIEM Pivot Search 10',
+        name: 'URL Pivot Search 9',
         description:'Search you want to perform',
         default: '',
         type: 'text',
@@ -107,7 +98,7 @@ module.exports = {
         },
         {
         key: 'url10',
-        name: 'SIEM Pivot Search 11',
+        name: 'URL Pivot Search 10',
         description:'Search you want to perform',
         default: '',
         type: 'text',
