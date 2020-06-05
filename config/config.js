@@ -1,6 +1,6 @@
 module.exports = {
-    name: "SIEM Pivot",
-    acronym: "SIEM",
+    name: "URL Pivot",
+    acronym: "URLP",
     entityTypes: ['IPv4', 'domain', 'hash', 'email'],
     block: {
         component: {
@@ -12,19 +12,21 @@ module.exports = {
     },
     logging:{
         level: 'trace'
-    }, options: [
+    }, 
+    onDemandOnly: true,
+    options: [
         {
         key: 'url1',
-        name: 'SIEM Pivot Search 1',
-        description:'Search you want to perform, replace the url below with the search that users can run. The {{ENTITY}} is the information that will get passed into the search. Name- is the name of the search that will be occuring, please ensure the name of the search ends with "-"',
-        default: 'GoogleExample-https://google.com/{{ENTITY}}',
+        name: 'URL Pivot Search 1',
+        description:'Search you want to perform, replace the url below with the search that users can run. The {{ENTITY}} is the information that will get passed into the search. Name> is the name of the search that will be occuring, please ensure the name of the search ends with ">"',
+        default: 'GoogleExample>https://google.com/{{ENTITY}}',
         type: 'text',
         userCanEdit: false,
         adminOnly: true
         },
         {
         key: 'url2',
-        name: 'SIEM Pivot Search 2',
+        name: 'URL Pivot Search 2',
         description:'Search you want to perform',
         default: '',
         type: 'text',

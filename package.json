@@ -1,8 +1,8 @@
 {
   "main": "./integration.js",
-  "name": "SIEMPivot",
-  "description": "Recognizes various entity types and allows an analyst to quickly pivot to custom SIEM search(es)",
-  "version": "3.0.4-beta",
+  "name": "URLPivot",
+  "description": "Recognizes various entity types and allows an analyst to quickly pivot to custom URL search(es)",
+  "version": "3.0.5-beta",
   "private": true,
   "dependencies": {
     "lodash": "^4.17"

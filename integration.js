@@ -27,12 +27,19 @@ function doLookup(entities, options, cb) {
 
 
     search.forEach(function(item){
-      let splitItems = item.split("-");
+      if(_.includes(item, '>')){
+      let splitItems = item.split(">");
       if(splitItems[0] && splitItems[1]){
         searchObject.push({name: splitItems[0], urls: splitItems[1]});
       }
+    } else {
+        return {
+          detail: "Incorrect URL Set up:", item 
+        };
+    }
     });
 
+    
     lookupResults.push({
       entity: entity,
       data: {
