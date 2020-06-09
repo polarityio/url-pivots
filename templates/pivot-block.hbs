@@ -4,7 +4,9 @@
   </h1>
   {{#each details.searchObject as |search|}}
     {{#if search.name}}
-      <div><a class="p-link" href={{search.urls}}> {{search.name}}</a></div>
+      <div>
+        <a class="p-link" href={{search.urls}}>{{search.name}}</a>
+      </div>
     {{/if}}
   {{/each}}
 {{/if}}

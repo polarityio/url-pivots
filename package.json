@@ -2,7 +2,7 @@
   "main": "./integration.js",
   "name": "URLPivot",
   "description": "Recognizes various entity types and allows an analyst to quickly pivot to custom URL search(es)",
-  "version": "3.0.7-beta",
+  "version": "3.0.0-beta",
   "private": true,
   "dependencies": {
     "lodash": "^4.17"
