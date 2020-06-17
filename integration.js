@@ -14,16 +14,16 @@ function doLookup(entities, options, cb) {
     let searchObject = [];
     let search = [];
     
-    search.push(options.url1.replace(/{{ENTITY}}/, entity.value));
-    search.push(options.url2.replace(/{{ENTITY}}/, entity.value));
-    search.push(options.url3.replace(/{{ENTITY}}/, entity.value));
-    search.push(options.url4.replace(/{{ENTITY}}/, entity.value));
-    search.push(options.url5.replace(/{{ENTITY}}/, entity.value));
-    search.push(options.url6.replace(/{{ENTITY}}/, entity.value));
-    search.push(options.url7.replace(/{{ENTITY}}/, entity.value));
-    search.push(options.url8.replace(/{{ENTITY}}/, entity.value));
-    search.push(options.url9.replace(/{{ENTITY}}/, entity.value));
-    search.push(options.url10.replace(/{{ENTITY}}/, entity.value));
+    search.push(options.url1.replace(/{{ENTITY}}/gi, entity.value));
+    search.push(options.url2.replace(/{{ENTITY}}/gi, entity.value));
+    search.push(options.url3.replace(/{{ENTITY}}/gi, entity.value));
+    search.push(options.url4.replace(/{{ENTITY}}/gi, entity.value));
+    search.push(options.url5.replace(/{{ENTITY}}/gi, entity.value));
+    search.push(options.url6.replace(/{{ENTITY}}/gi, entity.value));
+    search.push(options.url7.replace(/{{ENTITY}}/gi, entity.value));
+    search.push(options.url8.replace(/{{ENTITY}}/gi, entity.value));
+    search.push(options.url9.replace(/{{ENTITY}}/gi, entity.value));
+    search.push(options.url10.replace(/{{ENTITY}}/gi, entity.value));
 
 
     search.forEach(function(item){
