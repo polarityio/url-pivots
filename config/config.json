@@ -1,12 +1,8 @@
 {
   "name": "URL Pivot",
   "acronym": "URLP",
-  "entityTypes": [
-    "IPv4",
-    "domain",
-    "hash",
-    "email"
-  ],
+  "entityTypes": ["IPv4", "domain", "hash", "email"],
+  "defaultColor": "light-gray",
   "block": {
     "component": {
       "file": "./components/pivot-block.js"
