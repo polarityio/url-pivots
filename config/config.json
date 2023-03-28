@@ -1,4 +1,5 @@
 {
+  "polarityIntegrationUuid": "dac4ec80-cce1-11ed-aeee-075d3490155d",
   "name": "URL Pivot",
   "acronym": "URLP",
   "entityTypes": ["IPv4", "domain", "hash", "email"],
