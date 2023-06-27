@@ -1,6 +1,6 @@
 {
   "name": "URLPivot",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "main": "./integration.js",
   "description": "Recognizes various entity types and allows an analyst to quickly pivot to custom URL search(es)",
   "private": true,

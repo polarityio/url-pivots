@@ -20,8 +20,7 @@ module.exports = {
     key: '',
     passphrase: '',
     ca: '',
-    proxy: '',
-    rejectUnauthorized: false
+    proxy: ""
   },
   options: [
     {
