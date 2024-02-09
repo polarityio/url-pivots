@@ -26,7 +26,7 @@ module.exports = {
   options: [
     {
       key: 'url1',
-      name: 'URL Pivot Search 1',
+      name: '1) URL Pivot Search 1',
       description:
         'Search you want to perform.  Replace the URL below with the search that users can run. The string `{{ENTITY}}` will be replace by the looked up indicator.  You can also use a specific entity type such as `{{IPv4}}`, `{{hash}}`, or `{{cve}}`. You can "or" together multiple entity types with a "|" (e.g., `{{IP|domain}}`. Name> is the name of the search that will be occuring, please ensure the name of the search ends with ">"',
       default: 'GoogleExample>https://google.com/{{ENTITY}}',
@@ -36,7 +36,7 @@ module.exports = {
     },
     {
       key: 'url1Description',
-      name: 'URL Pivot Search 1 Description',
+      name: '1) URL Pivot Search 1 Description',
       description: 'Add an optional description to display for URL Pivot Search 1',
       default: '',
       type: 'text',
@@ -45,7 +45,7 @@ module.exports = {
     },
     {
       key: 'url2',
-      name: 'URL Pivot Search 2',
+      name: '2) URL Pivot Search 2',
       description: 'Search you want to perform',
       default: '',
       type: 'text',
@@ -54,7 +54,7 @@ module.exports = {
     },
     {
       key: 'url2Description',
-      name: 'URL Pivot Search 2 Description',
+      name: '2) URL Pivot Search 2 Description',
       description: 'Add an optional description to display for URL Pivot Search 2',
       default: '',
       type: 'text',
@@ -63,7 +63,7 @@ module.exports = {
     },
     {
       key: 'url3',
-      name: 'URL Pivot Search 3',
+      name: '3) URL Pivot Search 3',
       description: 'Search you want to perform',
       default: '',
       type: 'text',
@@ -72,7 +72,7 @@ module.exports = {
     },
     {
       key: 'url3Description',
-      name: 'URL Pivot Search 3 Description',
+      name: '3) URL Pivot Search 3 Description',
       description: 'Add an optional description to display for URL Pivot Search 3',
       default: '',
       type: 'text',
@@ -81,7 +81,7 @@ module.exports = {
     },
     {
       key: 'url4',
-      name: 'URL Pivot Search 4',
+      name: '4) URL Pivot Search 4',
       description: 'Search you want to perform',
       default: '',
       type: 'text',
@@ -90,7 +90,7 @@ module.exports = {
     },
     {
       key: 'url4Description',
-      name: 'URL Pivot Search 4 Description',
+      name: '4) URL Pivot Search 4 Description',
       description: 'Add an optional description to display for URL Pivot Search 4',
       default: '',
       type: 'text',
@@ -99,7 +99,7 @@ module.exports = {
     },
     {
       key: 'url5',
-      name: 'URL Pivot Search 5',
+      name: '5) URL Pivot Search 5',
       description: 'Search you want to perform',
       default: '',
       type: 'text',
@@ -108,7 +108,7 @@ module.exports = {
     },
     {
       key: 'url5Description',
-      name: 'URL Pivot Search 5 Description',
+      name: '5) URL Pivot Search 5 Description',
       description: 'Add an optional description to display for URL Pivot Search 5',
       default: '',
       type: 'text',
@@ -117,7 +117,7 @@ module.exports = {
     },
     {
       key: 'url6',
-      name: 'URL Pivot Search 6',
+      name: '6) URL Pivot Search 6',
       description: 'Search you want to perform',
       default: '',
       type: 'text',
@@ -126,7 +126,7 @@ module.exports = {
     },
     {
       key: 'url6Description',
-      name: 'URL Pivot Search 6 Description',
+      name: '6) URL Pivot Search 6 Description',
       description: 'Add an optional description to display for URL Pivot Search 6',
       default: '',
       type: 'text',
@@ -135,7 +135,7 @@ module.exports = {
     },
     {
       key: 'url7',
-      name: 'URL Pivot Search 7',
+      name: '7) URL Pivot Search 7',
       description: 'Search you want to perform',
       default: '',
       type: 'text',
@@ -144,7 +144,7 @@ module.exports = {
     },
     {
       key: 'url7Description',
-      name: 'URL Pivot Search 7 Description',
+      name: '7) URL Pivot Search 7 Description',
       description: 'Add an optional description to display for URL Pivot Search 7',
       default: '',
       type: 'text',
@@ -153,7 +153,7 @@ module.exports = {
     },
     {
       key: 'url8',
-      name: 'URL Pivot Search 8',
+      name: '8) URL Pivot Search 8',
       description: 'Search you want to perform',
       default: '',
       type: 'text',
@@ -162,7 +162,7 @@ module.exports = {
     },
     {
       key: 'url8Description',
-      name: 'URL Pivot Search 8 Description',
+      name: '8) URL Pivot Search 8 Description',
       description: 'Add an optional description to display for URL Pivot Search 8',
       default: '',
       type: 'text',
@@ -171,7 +171,7 @@ module.exports = {
     },
     {
       key: 'url9',
-      name: 'URL Pivot Search 9',
+      name: '9) URL Pivot Search 9',
       description: 'Search you want to perform',
       default: '',
       type: 'text',
@@ -180,7 +180,7 @@ module.exports = {
     },
     {
       key: 'url9Description',
-      name: 'URL Pivot Search 9 Description',
+      name: '9) URL Pivot Search 9 Description',
       description: 'Add an optional description to display for URL Pivot Search 9',
       default: '',
       type: 'text',
@@ -189,7 +189,7 @@ module.exports = {
     },
     {
       key: 'url10',
-      name: 'URL Pivot Search 10',
+      name: '10) URL Pivot Search 10',
       description: 'Search you want to perform',
       default: '',
       type: 'text',
@@ -198,7 +198,7 @@ module.exports = {
     },
     {
       key: 'url10Description',
-      name: 'URL Pivot Search 10 Description',
+      name: '10) URL Pivot Search 10 Description',
       description: 'Add an optional description to display for URL Pivot Search 10',
       default: '',
       type: 'text',
