@@ -1,12 +1,21 @@
-{{#if details.searchObject}}
+{{#if details.urlPivots}}
   <h1 class="p-title">
-      {{fa-icon "info" fixedWidth=true}}  Select a Search to Execute
+      {{fa-icon "external-link-square" fixedWidth=true}}  Select a Search to Execute
   </h1>
-  {{#each details.searchObject as |search|}}
-    {{#if search.name}}
-      <div>
-        <a class="p-link" href={{search.urls}}>{{search.name}}</a>
-      </div>
-    {{/if}}
-  {{/each}}
+  <div class="pivots">
+    {{#each details.urlPivots as |pivot|}}
+      {{#if pivot.name}}
+        <div class="pivot-container">
+          <div>
+            <a class="p-link" title="{{pivot.url}}" href="{{pivot.url}}">{{pivot.name}}</a>
+          </div>
+          {{#if pivot.description}}
+            <div class="p-footnote">
+              {{pivot.description}}
+            </div>
+          {{/if}}
+        </div>
+      {{/if}}
+    {{/each}}
+  </div>
 {{/if}}
