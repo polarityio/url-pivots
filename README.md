@@ -2,9 +2,9 @@
 
 The Polarity URL Pivot integration allows an analyst to run an on-demand query against an IP, hash, domain or email to return a list of queries that they can then execute in their SIEM or any other Url users want to search. 
 
-| ![image](https://user-images.githubusercontent.com/22529325/83915919-31003a00-a742-11ea-8d70-bb75aa7e5dc9.png) |
-|---|
-|*URl Pivot Example* |
+| ![image](./images/overlay.png) |
+|--------------------------------|
+| *URl Pivot Example*            |
 
 ## Setting up URL Pivot Searches
 
