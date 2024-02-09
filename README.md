@@ -7,6 +7,7 @@ The Polarity URL Pivot integration allows an analyst to run an on-demand query a
 |*URl Pivot Example* |
 
 ## Setting up URL Pivot Searches
+
 By default the Url Pivot integration does not pivot out to any sites, so you or your Polarity admin will need to add them in. There are 10 pivot links that can be set up, if you need more added please contact your Polarity Admin. 
 
 You can add up to 10 links via the "URL Pivot Search" options.  To add a link just type in the field the "Name" of the search followed by a ">" then the url you want to search.  The format will look like this:
@@ -47,10 +48,31 @@ The following is a list of supported substitutions:
 {{CVE}}
 ```
 
+### Multiple Entity Type URLs
+
 If you want to add a link that appears for more than one entity type you can "OR" multiple entity types together using the "|" character.  As an example, to generate a link that will appear for both domains and IPv4 addresses you could do the following:
 
 ```
 Google IP and Domain Search>https://www.google.com/search?q={{IP|DOMAIN}}
+```
+
+### Custom Types
+
+If you've added a custom type to the integration you can reference these custom types using the format `{{custom.<key>}}`.  As an example, if you have a custom type called `hostname` in your config file:
+
+```
+"customTypes": [
+  {
+    "key": "hostname",
+    "regex": /hostname[0-9]{1,3}/
+  }
+]
+```
+
+You could reference this custom type in a URL as follows:
+
+```
+https://assets.internal.com/{{custom.hostname}}
 ```
 
 ## Installation Instructions

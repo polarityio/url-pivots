@@ -1,7 +1,9 @@
 let Logger;
 const _ = require('lodash');
+const configJson = require('./config/config.json');
+const configJs = require('./config/config.js');
 
-const substitutionRegex = /{{([a-zA-Z12456|\s]+)}}/gi;
+const substitutionRegex = /{{([.a-zA-Z12456|\s]+)}}/gi;
 
 const regexes = {
   url: /{{URL}}/gi,
@@ -19,10 +21,21 @@ const regexes = {
   entity: /{{ENTITY}}/gi
 };
 
-urlOptions = ['url1', 'url2', 'url3', 'url4', 'url5', 'url6', 'url7', 'url8', 'url9', 'url10'];
+const urlOptions = ['url1', 'url2', 'url3', 'url4', 'url5', 'url6', 'url7', 'url8', 'url9', 'url10'];
+
+let customTypes = [];
 
 function startup(logger) {
   Logger = logger;
+  if (Array.isArray(configJson.customTypes)) {
+    customTypes = configJson.customTypes;
+  } else if (Array.isArray(configJs.customTypes)) {
+    customTypes = configJs.customTypes;
+  }
+
+  customTypes.forEach((type) => {
+    type.urlMatchRegex = new RegExp(`{{custom\.${type.key}}}`, 'gi');
+  });
 }
 
 function doLookup(entities, options, cb) {
@@ -37,8 +50,8 @@ function doLookup(entities, options, cb) {
       if (urlOptionValue.length > 0) {
         let [name, url] = urlOptionValue.split('>');
         expandUrl(url).forEach((expandedUrl) => {
-          Logger.trace({ expandedUrl: expandedUrl }, 'Expanded URL');
-          let formattedUrl = formatUrl(entity, expandedUrl.trim());
+          let formattedUrl = formatUrl(entity, expandedUrl);
+          Logger.trace({expandedUrl, formattedUrl}, 'Expanded and Formatted URL');
           if (formattedUrl) {
             urlPivots.push({
               name: name.trim(),
@@ -65,7 +78,9 @@ function doLookup(entities, options, cb) {
       }
     });
   });
-  Logger.trace({ lookupResults: lookupResults }, 'Logging lookup results');
+
+  Logger.trace({ lookupResults: lookupResults }, 'Lookup Results');
+
   cb(null, lookupResults);
 }
 
@@ -73,7 +88,7 @@ function expandUrl(url) {
   const expandedUrls = [];
   let matches = url.matchAll(substitutionRegex);
 
-  for(const match of matches) {
+  for (const match of matches) {
     let captureGroup = match[1];
     if (captureGroup.includes('|')) {
       const types = captureGroup.split('|');
@@ -84,8 +99,9 @@ function expandUrl(url) {
   }
 
   if (expandedUrls.length === 0) {
-    expandedUrls.push(url);
+    expandedUrls.push(url.trim());
   }
+
   return expandedUrls;
 }
 
@@ -128,6 +144,13 @@ function formatUrl(entity, url) {
   }
   if (entity.isURL) {
     urlCopy = urlCopy.replace(regexes.url, entity.value);
+  }
+  if (customTypes.length > 0) {
+    customTypes.forEach((type) => {
+      if (entity.types.indexOf(`custom.${type.key}`) >= 0) {
+        urlCopy = urlCopy.replace(type.urlMatchRegex, entity.value);
+      }
+    });
   }
 
   urlCopy = urlCopy.replace(regexes.entity, entity.value);
