@@ -218,5 +218,10 @@
       "adminOnly": true
     }
   ],
-  "polarityIntegrationUuid": "dac4ec80-cce1-11ed-aeee-075d3490155d"
+  "polarityIntegrationUuid": "dac4ec80-cce1-11ed-aeee-075d3490155d",
+  "reducer": {
+    "details": {
+      "file": "./reducers/details.json"
+    }
+  }
 }

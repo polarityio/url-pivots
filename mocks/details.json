@@ -1,0 +1,29 @@
+{
+  "urlPivots": [
+    {
+      "name": "VirusTotal",
+      "url": "https://www.virustotal.com/gui/ip-address/192.168.1.100",
+      "description": "Check IP reputation on VirusTotal"
+    },
+    {
+      "name": "Shodan",
+      "url": "https://www.shodan.io/host/192.168.1.100",
+      "description": "Search for exposed services and vulnerabilities"
+    },
+    {
+      "name": "AbuseIPDB",
+      "url": "https://www.abuseipdb.com/check/192.168.1.100",
+      "description": "Check if this IP has been reported for malicious activity"
+    },
+    {
+      "name": "Google Search",
+      "url": "https://www.google.com/search?q=192.168.1.100",
+      "description": ""
+    },
+    {
+      "name": "Censys",
+      "url": "https://search.censys.io/hosts/192.168.1.100",
+      "description": "View internet-wide scan data for this host"
+    }
+  ]
+}
